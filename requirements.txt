@@ -6,3 +6,4 @@ folium
 streamlit-folium
 openaq
 scikit-learn
+python-dotenv
