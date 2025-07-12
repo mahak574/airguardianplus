@@ -1,0 +1,15 @@
+# Ignore sensitive environment variables
+.env
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Virtual environments (optional)
+venv/
+env/
+
+aqi_log.csv
