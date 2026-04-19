@@ -12,4 +12,5 @@ Thumbs.db
 venv/
 env/
 
-aqi_log.csv
+__pycache__/
+*.pyc

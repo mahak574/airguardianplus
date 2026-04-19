@@ -78,7 +78,18 @@ if not lat or not lon:
 if lat and lon:
     #location Name
     location_name = get_location_name(lat, lon)
+    if "Error" in location_name or location_name == "Unknown Location":
+        location_name = f"{lat:.2f}, {lon:.2f}"
     st.markdown(f"### 📍 Location: `{location_name}`")
+
+    from datetime import date
+    today = date.today()
+
+    if today.month == 11:
+        st.warning("🎆 Diwali season — pollution may spike due to fireworks.")
+    elif today.month in [10, 11] and "Punjab" in location_name:
+        st.warning("🌾 Crop burning season — air quality may be poor.")
+
     
     #Current Weather, Temperature, humidity, wind speed, Condition
     weather = get_forecast_by_coords(lat, lon)
@@ -129,6 +140,7 @@ if lat and lon:
         st.metric("🔢 AQI Index", f"{aqi_index}")
         st.markdown(f"**Status:** {status}")
         st.caption(f"📅 Last updated: {aqi['last_updated']}")
+        st.caption("📡 Source: Ground sensors + satellite + reanalysis (via OpenAQ/NASA GIBS)")
 
     # Next 5 days Forecast
     st.subheader("📅 5-Day Forecast")
@@ -184,15 +196,4 @@ if lat and lon:
     folium.Marker([lat, lon], tooltip="📍 You are here").add_to(m)
     st_folium(m, height=400, key="map_view")
 
-# --- Download CSV Button
-st.subheader("⬇️ Download PM2.5 Log Data")
-try:
-    with open("aqi_log.csv", "rb") as f:
-        st.download_button(
-            label="Download aqi_log.csv",
-            data=f,
-            file_name="aqi_log.csv",
-            mime="text/csv"
-        )
-except FileNotFoundError:
-    st.info("📄 No log file found yet. Reload the app to generate data.")
+
