@@ -41,3 +41,6 @@ desktop-tutorial/
 
 # IDE files (optional)
 .vscode/
+# Production build
+dist/
+**/dist/
