@@ -1,5 +1,8 @@
+
 # Ignore sensitive environment variables
 .env
+.env.*
+!.env.example
 .streamlit/secrets.toml
 
 # Jupyter Notebook checkpoints
@@ -21,7 +24,20 @@ __pycache__/
 *.pyo
 *.pyd
 
+# Node.js dependencies
+node_modules/
+**/node_modules/
+
+# React / Vite build files
+dist/
+build/
+.vite/
+
 # Local log files and scratch files
+*.log
 aqi_log.csv
 a.py
 desktop-tutorial/
+
+# IDE files (optional)
+.vscode/
