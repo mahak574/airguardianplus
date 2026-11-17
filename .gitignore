@@ -1,5 +1,21 @@
 # Ignore sensitive environment variables
 .env
+frontend/.env
+
+# Node.js
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+.vite/
+frontend/.vite/
+
+# Python
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
 
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints/
@@ -7,10 +23,3 @@
 # OS files
 .DS_Store
 Thumbs.db
-
-# Virtual environments (optional)
-venv/
-env/
-
-__pycache__/
-*.pyc

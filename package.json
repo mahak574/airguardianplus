@@ -1,0 +1,10 @@
+{
+  "name": "airguardianplus",
+  "version": "2.0.0",
+  "description": "AirGuardian+ React Application — Localized Atmospheric & Environmental Intelligence",
+  "scripts": {
+    "dev": "npm run dev --prefix frontend",
+    "build": "npm run build --prefix frontend",
+    "preview": "npm run preview --prefix frontend"
+  }
+}
