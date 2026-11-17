@@ -1,0 +1,27 @@
+# Ignore sensitive environment variables
+.env
+.streamlit/secrets.toml
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Virtual environments
+venv/
+env/
+.venv/
+ENV/
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Local log files and scratch files
+aqi_log.csv
+a.py
+desktop-tutorial/
