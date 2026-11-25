@@ -1,7 +1,7 @@
 // API Service for AirGuardian+
 
-const OPENWEATHER_API_KEY = import.meta.env.VITE_OPENWEATHER_API_KEY || '34e2667254f36664158f85e52a496756';
-const GEOCODER_API_KEY = import.meta.env.VITE_GEOCODER_API_KEY || '5bb0c23c1def487c82812e204ea8e37d';
+const OPENWEATHER_API_KEY = import.meta.env.VITE_OPENWEATHER_API_KEY || '';
+const GEOCODER_API_KEY = import.meta.env.VITE_GEOCODER_API_KEY || '';
 
 export const AQI_BREAKPOINTS = [
   { cLow: 0.0, cHigh: 12.0, aqiLow: 0, aqiHigh: 50, label: 'Good', description: 'Air quality is satisfactory and poses little or no risk.', badgeColor: 'bg-emerald-50 text-emerald-800 border-emerald-200', dotColor: '#2D6A4F' },

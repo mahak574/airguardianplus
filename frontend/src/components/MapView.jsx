@@ -7,7 +7,7 @@ export default function MapView({ coords, locationName }) {
   const markerRef = useRef(null);
   const circleRef = useRef(null);
 
-  const cartoApiKey = import.meta.env.VITE_CARTO_API_KEY || 'cb1_2xy2_2_741aa0a6a6d1f144fc32759a';
+  const cartoApiKey = import.meta.env.VITE_CARTO_API_KEY || '';
 
   // CARTO Positron tile URL (CARTO requires the query parameter to be ?key=, NOT ?api_key=)
   const tileUrl = cartoApiKey
